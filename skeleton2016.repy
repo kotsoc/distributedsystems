@@ -23,6 +23,8 @@ def board_connection_handler(ip, port, sockobj, thiscommhandle, listencommhandle
   try:
     msgheader = sockobj.recv(1024) # Receive message
     
+    print 'CHANGE ME!!!\n'
+    
     print '****Request:\n%s' % msgheader
     # React depending on message type: HTTP GET or POST, or some other type of communication.
     if msgheader.startswith( 'GET' ):
