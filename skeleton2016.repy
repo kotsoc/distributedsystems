@@ -30,9 +30,9 @@ def board_connection_handler(ip, port, sockobj, thiscommhandle, listencommhandle
     else:
       other_requests_handler(msgheader, sockobj, thiscommhandle)
 
-  except Exception as e:
+  except Exception, e:
     print "Exception in board: %s, %s\n" %(type(e), e)
-    raise
+    #raise
 
 # ------------------------------------------------------------------------------
 # Handles initial GET request from browser, outputs HTML string and closes socket.
@@ -157,4 +157,3 @@ if callfunc == 'initialize':
   #   print ee
 
   start_board()
-  
